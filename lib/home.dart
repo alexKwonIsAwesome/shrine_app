@@ -4,8 +4,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: Text('you did it!'),
-    ));
+      body: Center(
+        child: Text('you did it!'),
+      ),
+      resizeToAvoidBottomInset: false,
+    );
   }
 }
