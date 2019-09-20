@@ -21,7 +21,17 @@ class _LoginState extends State<Login> {
               Text('SHRINE')
             ],
           ),
-          SizedBox(height: 120.0)
+          SizedBox(height: 120.0),
+          TextField(
+            decoration: InputDecoration(filled: true, labelText: 'username'),
+          ),
+          SizedBox(
+            height: 12.0,
+          ),
+          TextField(
+            decoration: InputDecoration(filled: true, labelText: 'password'),
+            obscureText: true,
+          )
         ],
       ),
     ));
