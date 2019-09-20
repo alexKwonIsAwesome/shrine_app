@@ -6,6 +6,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,14 +26,33 @@ class _LoginState extends State<Login> {
           ),
           SizedBox(height: 120.0),
           TextField(
+            controller: _usernameController,
             decoration: InputDecoration(filled: true, labelText: 'username'),
           ),
           SizedBox(
             height: 12.0,
           ),
           TextField(
+            controller: _passwordController,
             decoration: InputDecoration(filled: true, labelText: 'password'),
             obscureText: true,
+          ),
+          ButtonBar(
+            children: <Widget>[
+              FlatButton(
+                child: Text('CANCEL'),
+                onPressed: () {
+                  _usernameController.clear();
+                  _passwordController.clear();
+                },
+              ),
+              RaisedButton(
+                child: Text('NEXT'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              )
+            ],
           )
         ],
       ),
