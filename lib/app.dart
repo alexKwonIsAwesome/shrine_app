@@ -48,6 +48,7 @@ ThemeData _buildShrineTheme() {
       primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
       accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
       primaryIconTheme: base.iconTheme.copyWith(color: kShrineBrown900),
+      inputDecorationTheme: InputDecorationTheme(border: OutlineInputBorder()));
 }
 
 TextTheme _buildShrineTextTheme(TextTheme base) {
